@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marchetti Veículos</title>
+<meta name="description" content="Seminovos com laudo cautelar, garantia de 6 meses e financiamento em até 60x. Estoque completo em Perdizes, São Paulo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#estoque">Pular para o estoque</a>
+
+<header class="site-header" id="topo">
+  <div class="shell header-inner">
+    <a class="brand" href="#topo" aria-label="Marchetti Veículos, página inicial">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span class="brand-text">
+        <strong>Marchetti</strong>
+        <span>Veículos</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+      <a href="#estoque">Estoque</a>
+      <a href="#simulador">Financiamento</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="alternar-tema" type="button" aria-label="Alternar tema claro e escuro">
+        <span class="tema-claro" aria-hidden="true">☾</span>
+        <span class="tema-escuro" aria-hidden="true">☀</span>
+      </button>
+      <a class="btn btn-solid header-cta" href="tel:+551133417720">(11) 3341-7720</a>
+      <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+              aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="shell hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Seminovos · Perdizes, São Paulo · desde 2011</p>
+        <h1>Todo carro daqui sai com a ficha aberta.</h1>
+        <p class="hero-lead">
+          Laudo cautelar completo, histórico de manutenção e quilometragem auditada.
+          Você lê tudo antes de dar a primeira volta no quarteirão.
+        </p>
+        <div class="hero-btns">
+          <a class="btn btn-solid btn-lg" href="#estoque">Ver estoque</a>
+          <a class="btn btn-ghost btn-lg" href="#simulador">Simular parcela</a>
+        </div>
+      </div>
+
+      <aside class="hero-destaque" id="hero-destaque" aria-label="Destaque da semana"></aside>
+
+      <dl class="hero-stats">
+        <div>
+          <dt>Carros no pátio</dt>
+          <dd><span class="odometro" data-para="132">0</span></dd>
+        </div>
+        <div>
+          <dt>Entregues desde 2011</dt>
+          <dd><span class="odometro" data-para="4870">0</span></dd>
+        </div>
+        <div>
+          <dt>Nota dos compradores</dt>
+          <dd><span class="odometro" data-para="4.9" data-decimais="1">0</span></dd>
+        </div>
+        <div>
+          <dt>Dias médios até a entrega</dt>
+          <dd><span class="odometro" data-para="3">0</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ GARANTIAS ============ -->
+  <section class="garantias" aria-label="O que está incluso">
+    <div class="shell garantias-grid">
+      <article>
+        <h2>Laudo cautelar</h2>
+        <p>Chassi, motor, estrutura e histórico de sinistro conferidos por empresa independente.</p>
+      </article>
+      <article>
+        <h2>6 meses de garantia</h2>
+        <p>Motor e câmbio cobertos, sem franquia, em qualquer oficina credenciada do estado.</p>
+      </article>
+      <article>
+        <h2>7 dias para desistir</h2>
+        <p>Não gostou? Devolve em até 7 dias ou 500 km e escolhe outro do pátio.</p>
+      </article>
+      <article>
+        <h2>Financiamento em 60x</h2>
+        <p>Aprovação em quatro bancos ao mesmo tempo. Você fica com a melhor taxa.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ ESTOQUE ============ -->
+  <section class="secao" id="estoque">
+    <div class="shell">
+      <header class="secao-head">
+        <p class="eyebrow">Estoque</p>
+        <h2 class="secao-titulo">Carros disponíveis hoje</h2>
+        <p class="secao-lead">
+          Todos com placa em nome da loja, IPVA do ano pago e revisão feita antes de entrar no anúncio.
+        </p>
+      </header>
+
+      <div class="filtros">
+        <div class="filtro-chips" role="group" aria-label="Filtrar por categoria">
+          <button type="button" class="chip is-ativo" data-categoria="todos">Todos</button>
+          <button type="button" class="chip" data-categoria="suv">SUV</button>
+          <button type="button" class="chip" data-categoria="sedan">Sedã</button>
+          <button type="button" class="chip" data-categoria="hatch">Hatch</button>
+          <button type="button" class="chip" data-categoria="picape">Picape</button>
+        </div>
+
+        <div class="filtro-campos">
+          <div class="campo">
+            <label for="busca">Buscar modelo</label>
+            <input type="search" id="busca" placeholder="Civic, Toro, elétrico..." autocomplete="off">
+          </div>
+          <div class="campo">
+            <label for="ordenacao">Ordenar por</label>
+            <select id="ordenacao">
+              <option value="preco-asc">Menor preço</option>
+              <option value="preco-desc">Maior preço</option>
+              <option value="km-asc">Menor quilometragem</option>
+              <option value="ano-desc">Mais novo</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <p class="contador" id="contador" role="status"></p>
+
+      <div class="grade-carros" id="grade-carros"></div>
+
+      <p class="vazio" id="estoque-vazio" hidden>
+        Nenhum carro bate com esse filtro. Tente outro termo ou
+        <button type="button" class="link-btn" id="limpar-filtros">limpe os filtros</button>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SIMULADOR ============ -->
+  <section class="secao secao-alt" id="simulador">
+    <div class="shell">
+      <header class="secao-head">
+        <p class="eyebrow">Financiamento</p>
+        <h2 class="secao-titulo">Simule a parcela antes de vir até a loja</h2>
+        <p class="secao-lead">
+          Cálculo pela Tabela Price com taxa de 1,29% ao mês — a mesma que usamos no balcão.
+          Serve como estimativa: a taxa final depende da análise de crédito.
+        </p>
+      </header>
+
+      <div class="simulador">
+        <form class="sim-form" id="sim-form" novalidate>
+          <div class="campo">
+            <label for="sim-veiculo">Veículo</label>
+            <select id="sim-veiculo"></select>
+          </div>
+
+          <div class="campo">
+            <label for="sim-preco">Valor do veículo</label>
+            <div class="input-prefixo">
+              <span aria-hidden="true">R$</span>
+              <input type="number" id="sim-preco" min="20000" max="500000" step="1000" value="168900">
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="sim-entrada">
+              Entrada <output class="campo-valor" id="sim-entrada-valor" for="sim-entrada"></output>
+            </label>
+            <input type="range" id="sim-entrada" min="0" max="90" step="5" value="30">
+            <p class="campo-ajuda" id="sim-entrada-ajuda"></p>
+          </div>
+
+          <div class="campo">
+            <label for="sim-prazo">Prazo</label>
+            <select id="sim-prazo">
+              <option value="12">12 meses</option>
+              <option value="24">24 meses</option>
+              <option value="36" selected>36 meses</option>
+              <option value="48">48 meses</option>
+              <option value="60">60 meses</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="sim-painel" aria-live="polite">
+          <p class="sim-rotulo">Parcela estimada</p>
+          <p class="sim-parcela"><span class="moeda">R$</span><span id="sim-parcela">0</span></p>
+          <dl class="sim-linhas">
+            <div><dt>Valor financiado</dt><dd id="sim-financiado">—</dd></div>
+            <div><dt>Total pago</dt><dd id="sim-total">—</dd></div>
+            <div><dt>Custo do crédito</dt><dd id="sim-juros">—</dd></div>
+            <div><dt>Taxa aplicada</dt><dd>1,29% a.m.</dd></div>
+          </dl>
+          <a class="btn btn-solid btn-block" href="#contato">Enviar para análise</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESSO ============ -->
+  <section class="secao" id="processo">
+    <div class="shell">
+      <header class="secao-head">
+        <p class="eyebrow">Como funciona</p>
+        <h2 class="secao-titulo">Da primeira mensagem à chave na mão</h2>
+      </header>
+
+      <ol class="passos">
+        <li>
+          <p class="passo-num">01</p>
+          <h3>Você escolhe e agenda</h3>
+          <p>Separa o carro no site e marca um horário. O veículo fica reservado no seu nome por 48 horas.</p>
+        </li>
+        <li>
+          <p class="passo-num">02</p>
+          <h3>Test-drive sem vendedor no banco do carona</h3>
+          <p>Leva o carro por 30 minutos, no trajeto que quiser. E pode passar na sua oficina de confiança.</p>
+        </li>
+        <li>
+          <p class="passo-num">03</p>
+          <h3>Crédito aprovado em quatro bancos</h3>
+          <p>Mandamos a proposta para quatro instituições ao mesmo tempo e mostramos todas as respostas.</p>
+        </li>
+        <li>
+          <p class="passo-num">04</p>
+          <h3>Transferência por nossa conta</h3>
+          <p>Cuidamos do Detran, do seguro e da entrega. Você sai dirigindo com tudo em dia.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="secao secao-alt" id="depoimentos">
+    <div class="shell">
+      <header class="secao-head">
+        <p class="eyebrow">Depoimentos</p>
+        <h2 class="secao-titulo">Quem já levou</h2>
+      </header>
+
+      <div class="depoimentos">
+        <figure>
+          <blockquote>
+            Levei o Nivus no meu mecânico antes de fechar. Ele achou uma pastilha gasta,
+            avisei a loja e trocaram sem discussão antes da entrega.
+          </blockquote>
+          <figcaption>
+            <strong>Rafael Okamoto</strong>
+            <span>VW Nivus Highline · março de 2026</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            Era meu primeiro carro financiado e eu não entendia nada de CET.
+            Sentaram comigo e abriram as quatro propostas na tela. Escolhi com calma.
+          </blockquote>
+          <figcaption>
+            <strong>Juliana Prado</strong>
+            <span>Hyundai HB20 Comfort · janeiro de 2026</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            Comprei a Hilux à distância, de Ribeirão Preto. Mandaram vídeo de cada
+            arranhão antes de eu pagar. Chegou exatamente como estava no vídeo.
+          </blockquote>
+          <figcaption>
+            <strong>Cleber Nunes</strong>
+            <span>Toyota Hilux SRV · novembro de 2025</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="secao" id="contato">
+    <div class="shell contato">
+      <div class="contato-form">
+        <p class="eyebrow">Contato</p>
+        <h2 class="secao-titulo">Agende seu test-drive</h2>
+        <p class="secao-lead">Respondemos em até 2 horas úteis. Sem robô e sem ligação insistente.</p>
+
+        <form id="form-contato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+            <p class="erro" data-erro="nome"></p>
+          </div>
+
+          <div class="campo-duplo">
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="erro" data-erro="email"></p>
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                     inputmode="numeric" placeholder="(11) 90000-0000" required>
+              <p class="erro" data-erro="telefone"></p>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="interesse">Carro de interesse</label>
+            <select id="interesse" name="interesse"></select>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem <span class="opcional">(opcional)</span></label>
+            <textarea id="mensagem" name="mensagem" rows="4"
+                      placeholder="Melhor dia e horário para o test-drive, dúvidas sobre o laudo..."></textarea>
+          </div>
+
+          <button class="btn btn-solid btn-lg btn-block" type="submit">Quero agendar</button>
+          <p class="sucesso" id="form-sucesso" hidden role="status"></p>
+        </form>
+      </div>
+
+      <aside class="contato-info">
+        <h3>A loja</h3>
+        <address>
+          Av. Sumaré, 1420<br>
+          Perdizes · São Paulo · SP<br>
+          CEP 05016-000
+        </address>
+
+        <h3>Horários</h3>
+        <dl class="horarios">
+          <div><dt>Segunda a sexta</dt><dd>9h — 19h</dd></div>
+          <div><dt>Sábado</dt><dd>9h — 15h</dd></div>
+          <div><dt>Domingo</dt><dd>Fechado</dd></div>
+        </dl>
+
+        <h3>Falar agora</h3>
+        <ul class="contato-links">
+          <li><a href="tel:+551133417720">(11) 3341-7720</a></li>
+          <li><a href="mailto:contato@marchettiveiculos.com.br">contato@marchettiveiculos.com.br</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span class="brand-text">
+        <strong>Marchetti</strong>
+        <span>Veículos</span>
+      </span>
+    </div>
+    <p class="footer-nota">
+      Marchetti Veículos Ltda · CNPJ 12.345.678/0001-90 · Av. Sumaré, 1420 — São Paulo/SP<br>
+      Valores e condições sujeitos a alteração sem aviso. Simulação não constitui proposta de crédito.
+    </p>
+    <p class="footer-ano">© <span id="ano"></span></p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
