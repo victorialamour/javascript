@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aurora — Cafeteria Artesanal</title>
+    <meta name="description" content="Café Aurora: cafeteria artesanal com grãos especiais, pães de fermentação natural e um cantinho aconchegante no centro da cidade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho" id="topo">
+        <div class="container cabecalho__interno">
+            <a class="logo" href="#topo">
+                <span class="logo__icone" aria-hidden="true">&#9749;</span>
+                Café Aurora
+            </a>
+
+            <button class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="menu" id="menuPrincipal">
+                <a href="#sobre">Sobre</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#visite">Visite</a>
+                <a class="botao botao--pequeno" href="#visite">Reservar mesa</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__interno">
+                <p class="selo">Torrado na casa, todos os dias</p>
+                <h1>O café que faz a sua manhã valer a pena</h1>
+                <p class="hero__texto">
+                    Grãos especiais de pequenos produtores brasileiros, pães de fermentação
+                    natural e um cantinho tranquilo pra você respirar antes do dia começar.
+                </p>
+                <div class="hero__acoes">
+                    <a class="botao" href="#cardapio">Ver o cardápio</a>
+                    <a class="botao botao--vazado" href="#visite">Como chegar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="container sobre__grade">
+                <div>
+                    <h2>Uma xícara feita com calma</h2>
+                    <p>
+                        Começamos em 2018 numa garagem, com uma torradeira pequena e muita
+                        teimosia. Hoje torramos nosso próprio café toda semana e servimos
+                        cada xícara do jeito que a gente gostaria de receber: sem pressa.
+                    </p>
+                    <p>
+                        Trabalhamos direto com produtores da Mantiqueira e do Cerrado
+                        Mineiro, pagando um preço justo pelo grão que chega até aqui.
+                    </p>
+                </div>
+                <ul class="diferenciais">
+                    <li>
+                        <span class="diferenciais__icone" aria-hidden="true">&#127793;</span>
+                        <h3>Grãos rastreáveis</h3>
+                        <p>Você sabe de qual fazenda veio o café da sua xícara.</p>
+                    </li>
+                    <li>
+                        <span class="diferenciais__icone" aria-hidden="true">&#128293;</span>
+                        <h3>Torra semanal</h3>
+                        <p>Nada de café parado: torramos em pequenos lotes.</p>
+                    </li>
+                    <li>
+                        <span class="diferenciais__icone" aria-hidden="true">&#129381;</span>
+                        <h3>Padaria própria</h3>
+                        <p>Fermentação natural, assado na hora, todo santo dia.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cardapio" id="cardapio">
+            <div class="container">
+                <h2 class="titulo-centro">Nosso cardápio</h2>
+                <p class="subtitulo-centro">Os queridinhos da casa — o cardápio completo muda com a estação.</p>
+
+                <div class="cardapio__grade">
+                    <article class="item">
+                        <h3>Espresso</h3>
+                        <p>Doce, encorpado e com final de chocolate meio amargo.</p>
+                        <span class="preco">R$ 7,00</span>
+                    </article>
+                    <article class="item">
+                        <h3>Cappuccino</h3>
+                        <p>Leite vaporizado na medida certa, com canela se você quiser.</p>
+                        <span class="preco">R$ 13,00</span>
+                    </article>
+                    <article class="item">
+                        <h3>Coado V60</h3>
+                        <p>Método filtrado que destaca as notas frutadas do grão da semana.</p>
+                        <span class="preco">R$ 15,00</span>
+                    </article>
+                    <article class="item">
+                        <h3>Pão na chapa</h3>
+                        <p>Pão de fermentação natural com manteiga de garrafa.</p>
+                        <span class="preco">R$ 12,00</span>
+                    </article>
+                    <article class="item">
+                        <h3>Bolo de fubá cremoso</h3>
+                        <p>Receita da avó da Ana, fatia generosa e sem economia.</p>
+                        <span class="preco">R$ 11,00</span>
+                    </article>
+                    <article class="item">
+                        <h3>Croissant de amêndoas</h3>
+                        <p>Folhado assado na hora, recheado com creme de amêndoas.</p>
+                        <span class="preco">R$ 16,00</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="visite" id="visite">
+            <div class="container visite__grade">
+                <div>
+                    <h2>Venha tomar um café com a gente</h2>
+                    <p>
+                        Estamos a duas quadras da praça central, com mesinhas na calçada
+                        e wi-fi liberado pra quem quer ficar um pouco mais.
+                    </p>
+                    <dl class="info">
+                        <div>
+                            <dt>Endereço</dt>
+                            <dd>Rua das Acácias, 128 — Centro</dd>
+                        </div>
+                        <div>
+                            <dt>Horário</dt>
+                            <dd>Seg a Sex, 7h às 19h · Sáb e Dom, 8h às 14h</dd>
+                        </div>
+                        <div>
+                            <dt>Contato</dt>
+                            <dd>(11) 4002-8922 · oi@cafeaurora.com.br</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <form class="formulario" id="formReserva" novalidate>
+                    <h3>Reserve sua mesa</h3>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Como te chamamos?" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+
+                    <label for="pessoas">Pessoas</label>
+                    <select id="pessoas" name="pessoas">
+                        <option value="1">1 pessoa</option>
+                        <option value="2" selected>2 pessoas</option>
+                        <option value="4">3 a 4 pessoas</option>
+                        <option value="6">5 ou mais</option>
+                    </select>
+
+                    <button class="botao botao--largo" type="submit">Quero reservar</button>
+                    <p class="formulario__aviso" id="aviso" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape__interno">
+            <p>© <span id="ano">2026</span> Café Aurora · Feito com muito café.</p>
+            <p class="rodape__redes">
+                <a href="#topo">Instagram</a>
+                <a href="#topo">Facebook</a>
+                <a href="#topo">WhatsApp</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
