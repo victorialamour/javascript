@@ -719,6 +719,7 @@ body.is-loading .intro span { opacity: 1; transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html, html:not(.has-lerp) { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: .001ms !important;
     animation-iteration-count: 1 !important;

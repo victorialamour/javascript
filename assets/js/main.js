@@ -459,12 +459,13 @@
     });
 
     // --- chrome sobre o painel colorido ---
+    // A virada segue a linha média da barra, não a faixa inteira: assim o
+    // texto só fica branco quando de fato está por cima do azul.
     if (takeover) {
       var tr = takeover.getBoundingClientRect();
       Array.prototype.forEach.call(chromes, function (c) {
-        var topo = c.classList.contains('chrome--top');
-        var y = topo ? 0 : vh - 42;
-        c.classList.toggle('is-over', tr.top < y + 42 && tr.bottom > y);
+        var meio = c.classList.contains('chrome--top') ? 21 : vh - 21;
+        c.classList.toggle('is-over', tr.top <= meio && tr.bottom >= meio);
       });
     }
 
