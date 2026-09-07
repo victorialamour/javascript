@@ -283,7 +283,7 @@
   if (statement && fine && motion) {
     var VARIANTES = [
       ['tile--a', "M'man"], ['tile--b', '°2026'], ['tile--c', 'Recife'],
-      ['tile--d', 'Olá'], ['tile--a', 'Ousado'], ['tile--c', 'Limpo'],
+      ['tile--d', 'Olá'], ['tile--a', 'Ousado'], ['tile--c', 'Só seu'],
       ['tile--b', 'Sob<br>medida'], ['tile--d', 'PE']
     ];
 
