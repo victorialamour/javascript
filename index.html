@@ -13,29 +13,33 @@
 <meta property="og:description" content="Criamos design ousado e código limpo. Recife, Brasil.">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="preload" href="assets/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="is-loading">
 
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
+
+<!-- cortina de entrada -->
+<div class="intro" id="intro" aria-hidden="true"><span>M'man</span></div>
+
+<!-- cursor -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <!-- ============ 00 · chrome fixo ============ -->
 <header class="chrome chrome--top">
   <a class="chrome__brand" href="#inicio">Studio M'man</a>
-  <span class="chrome__edition">Portfólio °2026</span>
+  <button type="button" class="lnk chrome__theme" data-theme-toggle aria-pressed="false">Modo escuro</button>
   <nav class="chrome__nav" aria-label="Ações">
-    <button type="button" class="lnk" id="theme-toggle" aria-pressed="false">Modo escuro</button>
-    <span class="chrome__dot" aria-hidden="true">·</span>
+    <span class="chrome__edition">Portfólio °2026</span>
     <button type="button" class="lnk" id="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
-    <span class="chrome__dot" aria-hidden="true">·</span>
     <a class="lnk lnk--cta" href="#contato">Vamos conversar!</a>
   </nav>
 </header>
 
-<div class="chrome chrome--bottom" aria-hidden="false">
+<div class="chrome chrome--bottom">
   <span class="chrome__claim">Criamos design ousado e código limpo.</span>
   <span class="chrome__clock">Recife, Brasil&nbsp;&nbsp;<time id="clock" datetime="">--:--:--</time></span>
 </div>
@@ -43,140 +47,154 @@
 <!-- menu tela cheia -->
 <div class="menu" id="menu" hidden>
   <nav class="menu__nav" aria-label="Navegação principal">
-    <a href="#inicio">Início</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#metodo">Método</a>
-    <a href="#estudio">Estúdio</a>
-    <a href="#planos">Planos</a>
-    <a href="#novidades">Novidades</a>
-    <a href="#contato">Vamos conversar</a>
+    <a href="#inicio"><span>Início</span></a>
+    <a href="#projetos"><span>Projetos</span></a>
+    <a href="#servicos"><span>Serviços</span></a>
+    <a href="#metodo"><span>Método</span></a>
+    <a href="#estudio"><span>Estúdio</span></a>
+    <a href="#planos"><span>Planos</span></a>
+    <a href="#novidades"><span>Novidades</span></a>
+    <a href="#contato"><span>Vamos conversar</span></a>
   </nav>
   <div class="menu__foot">
-    <span>ola@studiomman.com.br</span>
-    <span>(81) 97304-7976</span>
+    <a href="mailto:ola@studiomman.com.br">ola@studiomman.com.br</a>
+    <a href="https://wa.me/5581973047976">(81) 97304-7976</a>
     <span>Recife, Brasil</span>
+    <button type="button" class="lnk menu__theme" data-theme-toggle aria-pressed="false">Modo escuro</button>
   </div>
 </div>
 
-<main>
+<main id="scroll">
 
 <!-- ============ 01 · hero ============ -->
 <section class="hero" id="inicio">
-  <div class="hero__bg" aria-hidden="true">
-    <span class="blob blob--a"></span>
-    <span class="blob blob--b"></span>
-    <div class="ticker"><div class="ticker__row">
-      <span>Studio M'man · Design ousado · Código limpo · Recife, Brasil ·&nbsp;</span>
-      <span>Studio M'man · Design ousado · Código limpo · Recife, Brasil ·&nbsp;</span>
-    </div></div>
-  </div>
-
   <h1 class="hero__title">
-    <span>Pensamos</span>
-    <span>Criamos e</span>
-    <span>Desenhamos</span>
+    <span class="line"><span>Pensamos</span></span>
+    <span class="line"><span>Criamos e</span></span>
+    <span class="line"><span>Desenhamos</span></span>
   </h1>
+
+  <!-- cartão que atravessa a manchete -->
+  <div class="hero__card" data-parallax="-0.34" aria-hidden="true">
+    <div class="tile tile--shot">
+      <span class="tile__kicker">Em obra</span>
+      <span class="tile__word">Calm<br>Clinique</span>
+      <span class="tile__meta">Recife · PE</span>
+    </div>
+  </div>
 
   <a class="hero__scroll" href="#sobre">[ Role ]</a>
 </section>
 
 <!-- ============ 02 · sobre ============ -->
 <section class="sec sec--split" id="sobre">
-  <div class="sec__side">
-    <p class="label">Sobre nós</p>
-  </div>
+  <div class="sec__side"><p class="label">Sobre nós</p></div>
   <div class="sec__body">
     <p class="prose reveal">O Studio M'man é um estúdio criativo que desenha e constrói experiências digitais de alto padrão para profissionais e marcas ambiciosas, combinando identidade visual forte, domínio técnico e pensamento voltado a performance.</p>
   </div>
 
-  <div class="sec__side sec__side--2">
-    <p class="label">Como trabalhamos</p>
-  </div>
-  <div class="sec__body">
+  <div class="sec__side sec__side--2"><p class="label">Como trabalhamos</p></div>
+  <div class="sec__body sec__body--2">
     <p class="prose reveal">Cada projeto começa por uma conversa longa sobre o que você vende, para quem vende e por que alguém escolhe você. O site vem depois — e vem inteiro sob medida.</p>
     <p class="prose reveal">Nenhum modelo pronto adaptado às pressas. Nenhuma seção que existe só porque todo site tem.</p>
   </div>
 </section>
 
 <!-- ============ 03 · projetos ============ -->
-<section class="sec projects" id="projetos">
-  <p class="label">Projetos recentes <em>(01)</em></p>
-
-  <ul class="projects__list">
-    <li class="project" data-preview="calm">
-      <a href="#contato">
-        <span class="project__name">Calm Clinique</span>
-        <span class="project__cap">Harmonização orofacial · Recife</span>
-      </a>
-    </li>
-  </ul>
-
-  <div class="preview" id="preview" aria-hidden="true">
-    <div class="preview__frame">
-      <div class="preview__bar"><i></i><i></i><i></i></div>
-      <div class="preview__shot">
-        <span class="preview__kicker">Harmonização orofacial</span>
-        <span class="preview__word">Calm<br>Clinique</span>
-        <span class="preview__meta">Recife · PE</span>
+<section class="takeover" id="projetos">
+  <div class="takeover__inner">
+    <p class="label label--on">Projetos recentes <em>(01)</em></p>
+    <a class="takeover__link" href="#contato">
+      <h2 class="takeover__name" data-split>Calm Clinique</h2>
+      <span class="badge">Ver projeto</span>
+    </a>
+    <p class="takeover__cap">Harmonização orofacial · Recife</p>
+    <div class="takeover__media" data-scale>
+      <div class="mock" aria-hidden="true">
+        <div class="mock__bar"><i></i><i></i><i></i><span>studiomman.com.br/calm-clinique</span></div>
+        <div class="mock__body">
+          <div class="mock__nav"><span>Calm Clinique</span><span>Tratamentos</span><span>Agendar</span></div>
+          <p class="mock__h">Harmonização<br>orofacial</p>
+          <div class="mock__rows"><i style="width:74%"></i><i style="width:52%"></i><i style="width:63%"></i></div>
+          <div class="mock__cards"><i></i><i></i><i></i></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ 04 · manifesto ============ -->
-<section class="sec manifesto">
+<section class="sec manifesto" id="manifesto">
   <p class="label">Ponto de partida</p>
-  <h2 class="display reveal">Faça do jeito<br>mais simples<br>possível</h2>
+  <h2 class="display" data-lines>Faça do jeito<br>mais simples<br>possível</h2>
 
-  <div class="manifesto__body">
-    <h3 class="sub reveal">Assuma a sua diferença</h3>
-    <p class="prose reveal">Ninguém lembra do segundo lugar. Nem do terceiro.</p>
-    <p class="prose reveal">Antes de desenhar qualquer tela, a gente estuda como você vende: a primeira pergunta que o cliente faz, a objeção que sempre aparece, o momento exato em que ele decide. É daí que sai o site — nunca do contrário.</p>
-    <p class="prose reveal">Nossa missão? Encontrar o que só você tem. Colocar sob os holofotes. E transformar isso na razão pela qual escolhem você.</p>
+  <div class="statement" id="statement">
+    <h3 class="statement__sub" data-words>Assuma a sua diferença</h3>
+    <p class="statement__big" data-words>Ninguém lembra do segundo lugar. Nem do terceiro.</p>
+    <p class="statement__note" data-words>Antes de desenhar qualquer tela, a gente estuda como você vende: a primeira pergunta que o cliente faz, a objeção que sempre aparece, o momento exato em que ele decide. É daí que sai o site — nunca do contrário.</p>
+    <p class="statement__note" data-words>Nossa missão? Encontrar o que só você tem. Colocar sob os holofotes. E transformar isso na razão pela qual escolhem você.</p>
   </div>
 </section>
 
 <!-- ============ 05 · serviços ============ -->
-<section class="sec" id="servicos">
+<section class="sec biglist" id="servicos" data-biglist>
   <p class="label">Serviços <em>(03)</em></p>
-  <ol class="items">
-    <li class="reveal">
-      <h3 class="items__name">Site completo</h3>
-      <p class="prose">A estrutura inteira, seção por seção. Para quem oferece mais de um serviço e precisa que cada um tenha o seu espaço, a sua explicação e a sua foto.</p>
-    </li>
-    <li class="reveal">
-      <h3 class="items__name">Landing page</h3>
-      <p class="prose">Uma página, um objetivo. Para um lançamento, uma campanha ou o serviço que você quer colocar à frente dos outros.</p>
-    </li>
-    <li class="reveal">
-      <h3 class="items__name">Site + manutenção</h3>
-      <p class="prose">O projeto completo mais o cuidado contínuo: hospedagem, atualização e ajuste toda vez que o seu trabalho mudar.</p>
-    </li>
-  </ol>
+
+  <div class="biglist__grid">
+    <div class="biglist__media" aria-hidden="true">
+      <div class="tile tile--a" data-slot="0"><span class="tile__word">Tudo</span></div>
+      <div class="tile tile--b" data-slot="1"><span class="tile__word">Uma<br>página</span></div>
+      <div class="tile tile--c" data-slot="2"><span class="tile__word">Sempre<br>no ar</span></div>
+    </div>
+
+    <ol class="biglist__list">
+      <li class="biglist__item" data-tag="Estrutura inteira">
+        <h3>Site completo</h3>
+        <p class="prose">A estrutura inteira, seção por seção. Para quem oferece mais de um serviço e precisa que cada um tenha o seu espaço, a sua explicação e a sua foto.</p>
+      </li>
+      <li class="biglist__item" data-tag="Um objetivo">
+        <h3>Landing page</h3>
+        <p class="prose">Uma página, um objetivo. Para um lançamento, uma campanha ou o serviço que você quer colocar à frente dos outros.</p>
+      </li>
+      <li class="biglist__item" data-tag="Cuidado contínuo">
+        <h3>Site + manutenção</h3>
+        <p class="prose">O projeto completo mais o cuidado contínuo: hospedagem, atualização e ajuste toda vez que o seu trabalho mudar.</p>
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ============ 06 · método ============ -->
-<section class="sec" id="metodo">
+<section class="sec biglist biglist--num" id="metodo" data-biglist>
   <p class="label">Método <em>(04)</em></p>
-  <ol class="items items--numbered">
-    <li class="reveal">
-      <h3 class="items__name"><em>01</em>Conversa</h3>
-      <p class="prose">Uma hora com você, sem compromisso. Sobre o serviço, sobre o cliente, sobre aquilo que você já cansou de explicar por telefone.</p>
-    </li>
-    <li class="reveal">
-      <h3 class="items__name"><em>02</em>Estrutura</h3>
-      <p class="prose">Antes de qualquer cor, o mapa: quais seções existem, em que ordem e o que cada uma precisa provar.</p>
-    </li>
-    <li class="reveal">
-      <h3 class="items__name"><em>03</em>Desenho</h3>
-      <p class="prose">Identidade, tipografia e imagem. Você acompanha e opina antes de existir qualquer linha de código.</p>
-    </li>
-    <li class="reveal">
-      <h3 class="items__name"><em>04</em>No ar</h3>
-      <p class="prose">Domínio, hospedagem e publicação por nossa conta. Você recebe o site funcionando — e a manutenção começa no mesmo dia.</p>
-    </li>
-  </ol>
+
+  <div class="biglist__grid">
+    <div class="biglist__media" aria-hidden="true">
+      <div class="tile tile--c" data-slot="0"><span class="tile__word">01</span></div>
+      <div class="tile tile--a" data-slot="1"><span class="tile__word">02</span></div>
+      <div class="tile tile--d" data-slot="2"><span class="tile__word">03</span></div>
+      <div class="tile tile--b" data-slot="3"><span class="tile__word">04</span></div>
+    </div>
+
+    <ol class="biglist__list">
+      <li class="biglist__item" data-tag="Uma hora, sem compromisso">
+        <h3><em>01</em>Conversa</h3>
+        <p class="prose">Uma hora com você, sem compromisso. Sobre o serviço, sobre o cliente, sobre aquilo que você já cansou de explicar por telefone.</p>
+      </li>
+      <li class="biglist__item" data-tag="O mapa antes da cor">
+        <h3><em>02</em>Estrutura</h3>
+        <p class="prose">Antes de qualquer cor, o mapa: quais seções existem, em que ordem e o que cada uma precisa provar.</p>
+      </li>
+      <li class="biglist__item" data-tag="Você opina antes">
+        <h3><em>03</em>Desenho</h3>
+        <p class="prose">Identidade, tipografia e imagem. Você acompanha e opina antes de existir qualquer linha de código.</p>
+      </li>
+      <li class="biglist__item" data-tag="Por nossa conta">
+        <h3><em>04</em>No ar</h3>
+        <p class="prose">Domínio, hospedagem e publicação por nossa conta. Você recebe o site funcionando — e a manutenção começa no mesmo dia.</p>
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ============ 07 · planos ============ -->
@@ -192,7 +210,7 @@
 <!-- ============ 08 · estúdio ============ -->
 <section class="sec" id="estudio">
   <p class="label">Estúdio</p>
-  <h2 class="display reveal">Por trás<br>dos pixels</h2>
+  <h2 class="display" data-lines>Por trás<br>dos pixels</h2>
 
   <div class="studio__grid">
     <div>
@@ -213,8 +231,19 @@
 
 <!-- ============ 10 · contato ============ -->
 <section class="sec contato" id="contato">
-  <h2 class="display reveal">Vamos<br>trabalhar juntos</h2>
+  <h2 class="contato__title">
+    <span class="line"><span>Vamos</span></span>
+    <span class="line line--inline">
+      <span class="contato__slot" data-grow aria-hidden="true"><span class="tile tile--d"><span class="tile__word">Olá</span></span></span>
+      <span>trabalhar juntos</span>
+    </span>
+  </h2>
+
   <p class="prose contato__call reveal">Trabalhe com a gente se o comum não é a sua praia. Manda a ideia, que a gente constrói.</p>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__row" id="marquee"></div>
+  </div>
 
   <form class="form" id="form" novalidate>
     <div class="field">
@@ -255,27 +284,32 @@
 
 <!-- ============ 11 · rodapé ============ -->
 <footer class="footer">
-  <p class="prose footer__pitch">Somos um estúdio criativo com base em Recife. Projeto grande, ideia maluca ou só vontade de trocar? Vamos conversar.</p>
+  <div class="footer__top">
+    <p class="prose footer__pitch reveal">Somos um estúdio criativo com base em Recife. Projeto grande, ideia maluca ou só vontade de trocar? Vamos conversar.</p>
 
-  <div class="footer__cols">
-    <div>
-      <p class="label">Contato</p>
-      <a class="footer__big" href="mailto:ola@studiomman.com.br">ola@studiomman.com.br</a>
-      <a class="footer__big" href="https://wa.me/5581973047976">(81) 97304-7976</a>
+    <div class="footer__cols">
+      <div>
+        <p class="label">Contato</p>
+        <a class="footer__big" href="mailto:ola@studiomman.com.br">ola@studiomman.com.br</a>
+        <a class="footer__big" href="https://wa.me/5581973047976">(81) 97304-7976</a>
+      </div>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#metodo">Método</a>
+        <a href="#estudio">Estúdio</a>
+        <a href="#planos">Planos</a>
+        <a href="#novidades">Novidades</a>
+      </nav>
     </div>
-    <nav class="footer__nav" aria-label="Rodapé">
-      <a href="#inicio">Início</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#metodo">Método</a>
-      <a href="#estudio">Estúdio</a>
-      <a href="#planos">Planos</a>
-      <a href="#novidades">Novidades</a>
-    </nav>
+
+    <p class="footer__sign">Todos os direitos reservados · Copyright °2026 · Studio M'man</p>
   </div>
 
-  <p class="footer__sign">Todos os direitos reservados · Copyright °2026 · Studio M'man</p>
-  <p class="wordmark" aria-hidden="true">M'man</p>
+  <div class="wordmark" data-wordmark aria-hidden="true">
+    <span>M'man</span>
+  </div>
 </footer>
 
 <script src="assets/js/main.js" defer></script>
