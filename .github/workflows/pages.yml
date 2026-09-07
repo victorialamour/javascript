@@ -24,6 +24,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # PASSO MANUAL, UMA VEZ SÓ: o Pages precisa ser ligado à mão em
+      # Settings › Pages › Source: "GitHub Actions". O token do workflow
+      # publica, mas não tem permissão para criar o site do zero — sem
+      # esse passo este job falha com "Resource not accessible by
+      # integration". Depois de ligado, o enablement abaixo vira no-op e
+      # todo push nesta branch republica sozinho.
       - name: Liga o Pages
         uses: actions/configure-pages@v5
         with:
