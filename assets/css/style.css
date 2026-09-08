@@ -395,15 +395,9 @@ body.is-loading .intro span { opacity: 1; transform: none; }
 
 .takeover__name {
   font-family: var(--display); font-weight: 400;
-  font-size: clamp(44px, 11.6vw, 166px);
-  line-height: .94; text-transform: uppercase; margin: 0;
+  font-size: clamp(38px, 9.4vw, 140px);
+  line-height: .96; text-transform: uppercase; margin: 0;
 }
-.takeover__name .ch {
-  display: inline-block;
-  transform: translateY(105%);
-  transition: transform .8s var(--swing);
-}
-.takeover.is-in .takeover__name .ch { transform: none; }
 
 .takeover__link:hover .badge,
 .takeover__link:focus-visible .badge { opacity: 1; transform: rotate(-3deg); }

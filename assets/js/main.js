@@ -150,19 +150,6 @@
     }).join('');
   });
 
-  // <h2 data-split>Calm Clinique</h2>  →  um span por caractere
-  Array.prototype.forEach.call(document.querySelectorAll('[data-split]'), function (el) {
-    var txt = el.textContent;
-    el.textContent = '';
-    txt.split('').forEach(function (ch, i) {
-      var s = document.createElement('span');
-      s.className = 'ch';
-      s.textContent = ch === ' ' ? ' ' : ch;
-      s.style.transitionDelay = (i * 0.026).toFixed(3) + 's';
-      el.appendChild(s);
-    });
-  });
-
   // <p data-words>…</p>  →  um span por palavra, para acender na rolagem
   var wordBlocks = [];
   Array.prototype.forEach.call(document.querySelectorAll('[data-words]'), function (el) {
@@ -339,7 +326,7 @@
   var marquee = document.getElementById('marquee');
   if (marquee) {
     var MARCAS = [
-      ['tile--a', "M'man"], ['tile--shot', 'Calm<br>Clinique'], ['tile--b', 'Landing'],
+      ['tile--a', "M'man"], ['tile--shot', 'Confiança'], ['tile--b', 'Landing'],
       ['tile--c', 'Site<br>completo'], ['tile--d', 'Manutenção'], ['tile--shot', 'Recife'],
       ['tile--b', '°2026'], ['tile--a', 'Sob<br>medida']
     ];
